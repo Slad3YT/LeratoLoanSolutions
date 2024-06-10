@@ -5,6 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lerato Loan Solutions</title>
+    <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+            emailjs.init("_xdKlVmPMMX8OKwiH"); // Initialize EmailJS with your User ID
+        })();
+    </script>
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet"> <!-- Add Google Font -->
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -46,6 +52,7 @@
         </div>
     </nav>
 
+    <!-- Hero Section -->
     <div class="container-fluid px-0 background-img" style="color: #f8f9fa;">
         <div class="background-overlay"></div>
         <div class="container col-xxl-8 px-4 py-5">
@@ -81,10 +88,8 @@
             </div>
         </div>
     </div>
-    
-    
-    
-    
+   
+    <!-- Abour Section -->
     <div class="responsive-container-block bigContainer" id="about">
         <div class="responsive-container-block Container bottomContainer">
             <div class="ultimateImg">
@@ -110,9 +115,8 @@
             </div>
         </div>
     </div>
-    
 
-    <!-- Service 10 - Bootstrap Brain Component -->
+    <!-- Service Section -->
     <section class="bg-light py-3 py-md-5 py-xl-8" id="service">
         <div class="container">
             <div class="row justify-content-md-center">
@@ -189,8 +193,9 @@
         </div>
     </section>
 
-    <!-- Contact 1 - Bootstrap Brain Component -->
+    <!-- Contact Section -->
     <section class="bg-light py-3 py-md-5" id="contact">
+
         <div class="container">
           <div class="row justify-content-md-center">
             <div class="col-12 col-md-10 col-lg-8 col-xl-7 col-xxl-6">
@@ -206,96 +211,88 @@
             <div class="col-12 col-lg-9">
               <div class="bg-white border rounded shadow-sm overflow-hidden">
       
-                <form action="#!">
-                  <div class="row gy-4 gy-xl-5 p-4 p-xl-5">
-                    <div class="col-12">
-                      <label for="fullname" class="form-label">Full Name <span class="text-danger">*</span></label>
-                      <input type="text" class="form-control" id="fullname" name="fullname" value="" required>
+                <form id="contact-form">
+                    <div class="row gy-4 gy-xl-5 p-4 p-xl-5">
+                        <div class="col-12">
+                            <label for="from_name" class="form-label">Full Name <span class="text-danger">*</span></label>
+                            <input type="text" class="form-control" id="from_name" name="from_name" value="" required>
+                        </div>
+                        <div class="col-12 col-md-6">
+                            <label for="email" class="form-label">Email <span class="text-danger">*</span></label>
+                            <div class="input-group">
+                                <span class="input-group-text">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope" viewBox="0 0 16 16">
+                                        <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z" />
+                                    </svg>
+                                </span>
+                                <input type="email" class="form-control" id="email" name="email" value="" required>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-6">
+                            <label for="phone" class="form-label">Phone Number</label>
+                            <div class="input-group">
+                                <span class="input-group-text">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-telephone" viewBox="0 0 16 16">
+                                        <path d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.568 17.568 0 0 0 4.168 6.608 17.569 17.569 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.678.678 0 0 0-.58-.122l-2.19.547a1.745 1.745 0 0 1-1.657-.459L5.482 8.062a1.745 1.745 0 0 1-.46-1.657l.548-2.19a.678.678 0 0 0-.122-.58L3.654 1.328zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z" />
+                                    </svg>
+                                </span>
+                                <input type="tel" class="form-control" id="phone" name="phone" value="">
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <label for="message" class="form-label">Message <span class="text-danger">*</span></label>
+                            <textarea class="form-control" id="message" name="message" rows="3" required></textarea>
+                        </div>
+                        <div class="col-12">
+                            <div class="d-grid">
+                                <button class="btn btn-primary btn-lg" type="submit" style="background-color: #f0750f; border: none;">Submit</button>
+                            </div>
+                        </div>
                     </div>
-                    <div class="col-12 col-md-6">
-                      <label for="email" class="form-label">Email <span class="text-danger">*</span></label>
-                      <div class="input-group">
-                        <span class="input-group-text">
-                          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope" viewBox="0 0 16 16">
-                            <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z" />
-                          </svg>
-                        </span>
-                        <input type="email" class="form-control" id="email" name="email" value="" required>
-                      </div>
-                    </div>
-                    <div class="col-12 col-md-6">
-                      <label for="phone" class="form-label">Phone Number</label>
-                      <div class="input-group">
-                        <span class="input-group-text">
-                          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-telephone" viewBox="0 0 16 16">
-                            <path d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.568 17.568 0 0 0 4.168 6.608 17.569 17.569 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.678.678 0 0 0-.58-.122l-2.19.547a1.745 1.745 0 0 1-1.657-.459L5.482 8.062a1.745 1.745 0 0 1-.46-1.657l.548-2.19a.678.678 0 0 0-.122-.58L3.654 1.328zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z" />
-                          </svg>
-                        </span>
-                        <input type="tel" class="form-control" id="phone" name="phone" value="">
-                      </div>
-                    </div>
-                    <div class="col-12">
-                      <label for="message" class="form-label">Message <span class="text-danger">*</span></label>
-                      <textarea class="form-control" id="message" name="message" rows="3" required></textarea>
-                    </div>
-                    <div class="col-12">
-                      <div class="d-grid">
-                        <button class="btn btn-primary btn-lg" type="submit" style="background-color: #f0750f; border: none;">Submit</button>
-                      </div>
-                    </div>
-                  </div>
                 </form>
+                
       
               </div>
             </div>
           </div>
         </div>
       </section>
-      
-
     
-
  <!-- Footer -->
  <footer class="text-center text-white" style="background-color: #f0750f;">
-    <!-- Grid container -->
+    
     <div class="container-fluid">
-        <!-- Section: Links -->
+       
         <section class="mt-5">
-            <!-- Grid row-->
+            
             <div class="row text-center d-flex justify-content-center pt-5">
-                <!-- Grid column -->
+               
                 <div class="col-md-2">
                     <h6 class="text-uppercase font-weight-bold">
                         <a href="#about" class="text-white">About</a>
                     </h6>
                 </div>
-                <!-- Grid column -->
-
-                <!-- Grid column -->
+                
                 <div class="col-md-2">
                     <h6 class="text-uppercase font-weight-bold">
                         <a href="#service" class="text-white">Our Services</a>
                     </h6>
                 </div>
-                <!-- Grid column -->
-
-                
-
-                <!-- Grid column -->
+               
                 <div class="col-md-2">
                     <h6 class="text-uppercase font-weight-bold">
                         <a href="#contact" class="text-white">Contact</a>
                     </h6>
                 </div>
-                <!-- Grid column -->
+                
             </div>
-            <!-- Grid row-->
+           
         </section>
-        <!-- Section: Links -->
+        
 
         <hr class="my-5" />
 
-        <!-- Section: Text -->
+        
         <section class="mb-5">
             <div class="row d-flex justify-content-center">
                 <div class="col-lg-8">
@@ -305,39 +302,61 @@
                 </div>
             </div>
         </section>
-        <!-- Section: Text -->
+        
 
-        <!-- Section: Social Icons -->
+        
         <section class="text-center mb-5">
-            <a href="" class="text-white me-4">
+            <a href="#" class="text-white me-4">
                 <i class="fab fa-facebook-f fa-2x"></i>
             </a>
-            <a href="" class="text-white me-4">
+            <!-- <a href="#" class="text-white me-4">
                 <i class="fab fa-twitter fa-2x"></i>
+            </a> -->
+            <a href="mailto:gugulerato609@gmail.com" class="text-white me-4">
+                <i class="fas fa-envelope fa-2x"></i>
             </a>
-            <a href="" class="text-white me-4">
-                <i class="fab fa-google fa-2x"></i>
-            </a>
-            <a href="" class="text-white me-4">
+            <a href="#" class="text-white me-4">
                 <i class="fab fa-instagram fa-2x"></i>
             </a>
-            <a href="" class="text-white me-4">
+            <!-- <a href="#" class="text-white me-4">
                 <i class="fab fa-linkedin fa-2x"></i>
+            </a> -->
+            <a href="https://wa.me/0630727476" class="text-white me-4">
+                <i class="fab fa-whatsapp fa-2x"></i>
+            </a>
+            <a href="tel:+27630727476" class="text-white me-4">
+                <i class="fas fa-phone fa-2x"></i>
             </a>
         </section>
-        <!-- Section: Social Icons -->
+        
+        
+       
     </div>
-    <!-- Grid container -->
+    
 
-    <!-- Copyright -->
     <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
         © 2024 Lerato Loan Solutions. All rights reserved.
     </div>
-    <!-- Copyright -->
+    
 </footer>
 
+<script type="text/javascript">
+    document.getElementById('contact-form').addEventListener('submit', function(event) {
+        event.preventDefault();
 
-<!-- Footer -->
+        emailjs.sendForm('service_f89rj8z', 'template_h5rpnip', '#contact-form')
+            .then(function(response) {
+                console.log('SUCCESS!', response.status, response.text);
+                alert('Message sent successfully!');
+            }, function(error) {
+                console.log('FAILED...', error);
+                alert('Failed to send message.');
+            });
+    });
+</script>
+
+
+
 <script>
     document.addEventListener("DOMContentLoaded", function() {
       calculate();
@@ -352,7 +371,7 @@
       
       document.getElementById('output1').innerHTML = "Interest Amount: R" + interestAmount;
       document.getElementById('output2').innerHTML = "Total payback amount: R" + totalPaybackAmount;
-      document.getElementById('output3').innerHTML = "Current Amount: R" + amount; // Display current amount on load
+      document.getElementById('output3').innerHTML = "Loan Amount: R" + amount; // Display current amount on load
     }
     
     document.getElementById('amount').addEventListener('input', function() {

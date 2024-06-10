@@ -81,8 +81,7 @@ h2, .headingText, .subHeadingText, .description {
 .navbar-brand span,
 .navbar-nav .nav-link,
 .text-blk.subHeadingText,
-.text-blk.description,
-.explore {
+.text-blk.description {
     font-weight: 600; /* Medium weight for emphasis */
 }
 
@@ -200,69 +199,6 @@ a {
     padding-right: 10px;
     padding-bottom: 0px;
     padding-left: 0px;
-}
-
-.explore {
-    font-size: 16px;
-    line-height: 28px;
-    color: rgb(102, 102, 102);
-    border-top-width: 2px;
-    border-right-width: 2px;
-    border-bottom-width: 2px;
-    border-left-width: 2px;
-    border-top-style: solid;
-    border-right-style: solid;
-    border-bottom-style: solid;
-    border-left-style: solid;
-    border-top-color: rgb(102, 102, 102);
-    border-right-color: rgb(102, 102, 102);
-    border-bottom-color: rgb(102, 102, 102);
-    border-left-color: rgb(102, 102, 102);
-    border-image-source: initial;
-    border-image-slice: initial;
-    border-image-width: initial;
-    border-image-outset: initial;
-    border-image-repeat: initial;
-    cursor: pointer;
-    background-color: white;
-    margin-top: 0px;
-    margin-right: 0px;
-    margin-bottom: 0px;
-    margin-left: 0px;
-    padding-top: 8px;
-    padding-right: 40px;
-    padding-bottom: 8px;
-    padding-left: 40px;
-}
-
-.explore:hover {
-    background-image: initial;
-    background-position-x: initial;
-    background-position-y: initial;
-    background-size: initial;
-
-    background-attachment: initial;
-    background-origin: initial;
-    background-clip: initial;
-    background-color: rgb(176, 98, 255);
-    color: white;
-    border-top-width: initial;
-    border-right-width: initial;
-    border-bottom-width: initial;
-    border-left-width: initial;
-    border-top-style: none;
-    border-right-style: none;
-    border-bottom-style: none;
-    border-left-style: none;
-    border-top-color: initial;
-    border-right-color: initial;
-    border-bottom-color: initial;
-    border-left-color: initial;
-    border-image-source: initial;
-    border-image-slice: initial;
-    border-image-width: initial;
-    border-image-outset: initial;
-    border-image-repeat: initial;
 }
 
 .responsive-container-block.Container {
@@ -429,12 +365,7 @@ a {
         line-height: 24px;
     }
 
-    .explore {
-        margin-top: 0px;
-        margin-right: 0px;
-        margin-bottom: 0px;
-        margin-left: 0px;
-    }
+    
 
     .responsive-container-block.bigContainer {
         padding-top: 10px;
@@ -702,10 +633,7 @@ a {
         line-height: 22px;
     }
 
-    .explore {
-        padding: 6px 35px 6px 35px;
-        font-size: 15px;
-    }
+    
 }
 
 /* Custom Styles */
